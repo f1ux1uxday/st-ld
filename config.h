@@ -68,6 +68,17 @@ static unsigned int blinktimeout = 800;
 static unsigned int cursorthickness = 2;
 
 /*
+ * 1: render most of the lines/blocks characters without using the font for perfect alignment between cells.
+ * Bold affects line thickness if boxdraw_bold is not 0. Italic is ignored.
+ * 0: disable (render glyphs normally from font)
+*/
+const int boxdraw = 1;
+const int boxdraw_bold = 0;
+
+/* braille (U28XX): 1: render as adjacent pixels, 0: use font */
+const int boxdraw_braille = 0;
+
+/*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
  * it
  */
