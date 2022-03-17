@@ -109,22 +109,22 @@ static const char *colorname[] = {
 	/* 8 normal colors */
 	"black",
 	"#dd0100",
-	"green3",
+	"#287f2d",
 	"#fac901",
 	"#225095",
-	"magenta3",
-	"cyan3",
+	"#7f2828",
+	"#105777",
 	"gray90",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
+	"#222222",
+	"#fe0000",
+	"#287f58",
+	"#ffff33",
 	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#7f5428",
+	"#3955a0",
+	"black", /* replaces white with white bg in effect */
 
 	[255] = 0,
 
@@ -168,7 +168,6 @@ static unsigned int cursorstyle = 1;
 static Rune stcursor = 0x2603; /* snowman ("☃") */
 
 
-
 /*
  * Default columns and rows numbers
  */
@@ -187,7 +186,7 @@ static unsigned int mousebg = 0;
  * Color used to display font attributes when fontconfig selected a font which
  * doesn't match the ones requested.
  */
-static unsigned int defaultattr = 11;
+static unsigned int defaultattr = 2;
 
 /*
  * Force mouse select/shortcuts while mask is active (when MODE_MOUSE is set).
